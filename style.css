@@ -1,0 +1,540 @@
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+html {
+    font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+    overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
+    -webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+    -ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+body {
+    background: #fff;
+    overflow: hidden;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section {
+    display: block;
+}
+ol, ul {
+    list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+tr:nth-child(even) {
+    background: #eee;
+}
+
+tr.standout-row,
+thead tr {
+    background: #DCF2F7;
+}
+
+tr.standout-row td,
+thead td {
+    font-weight: 600;
+}
+
+caption, th, td {
+    font-weight: normal;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: "";
+}
+blockquote, q {
+    quotes: "" "";
+}
+a:focus {
+    outline: thin dotted;
+}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+    outline: 0;
+}
+a img {
+    border: 0;
+}
+
+/* =Global
+----------------------------------------------- */
+
+body,
+button,
+input,
+select,
+textarea {
+    color: #272b35;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Lucida Grande, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+    clear: both;
+    margin: 0 0 10px;
+    color: #0DB2FF;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 165%;
+}
+
+h2 {
+    font-size: 150%;
+}
+
+h3 {
+    font-size: 135%;
+}
+
+h4 {
+    font-size: 120%;
+}
+
+h5 {
+    font-size: 110%;
+}
+
+h6 {
+    font-size: 100%;
+}
+
+p+h1, ul+h1,
+p+h2, ul+h2,
+p+h3, ul+h3,
+p+h4, ul+h4,
+p+h5, ul+h5,
+p+h6, ul+h6 {
+    margin-top: 30px;
+}
+
+
+hr {
+    background-color: #ddd;
+    border: 0;
+    height: 1px;
+    margin-bottom: 18px;
+}
+
+/* Text elements */
+p {
+    font-size: 100%;
+    margin-bottom: 18px;
+}
+ul, ol {
+    margin: 0 0 20px 7%;
+}
+ul {
+    list-style: disc;
+}
+ol {
+    list-style: decimal;
+}
+li > ul,
+li > ol {
+    margin-bottom: 0;
+    margin-left: 4%;
+}
+dt {
+    font-weight: bold;
+}
+dd {
+    margin: 0 1.5em 1.5em;
+}
+b, strong {
+    font-weight: bold;
+}
+dfn, cite, em {
+    font-style: italic;
+}
+blockquote {
+    font-family: georgia, times, serif;
+    font-style: italic;
+    margin: 0 1.5em;
+}
+address {
+    margin: 0 0 1.5em;
+}
+pre {
+    background: #eee;
+    font-family: "Courier 10 Pitch", Courier, monospace;
+    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    padding: 1.6em;
+    overflow: auto;
+    max-width: 100%;
+}
+code, kbd, tt, var {
+    font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym {
+    border-bottom: 1px dotted #666;
+    cursor: help;
+}
+mark, ins {
+    background: #fff9c0;
+    text-decoration: none;
+}
+sup,
+sub {
+    font-size: 75%;
+    height: 0;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    bottom: 1ex;
+}
+sub {
+    top: .5ex;
+}
+small {
+    font-size: 75%;
+}
+big {
+    font-size: 125%;
+}
+figure {
+    margin: 0;
+}
+table {
+    margin: 0 0 20px;
+    width: 100%;
+    max-width: 1020px;
+}
+th {
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+img {
+    height: auto; /* Make sure images are scaled correctly. */
+    max-width: 100%; /* Adhere to container width. */
+}
+
+label {
+    font-size: 85%;
+    color: #666;
+    display: block;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
+    padding: 0; /* Addresses excess padding in IE8/9 */
+}
+input[type="search"] {
+    -webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+    -webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+    -moz-box-sizing:    content-box;
+    box-sizing:         content-box;
+}
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+    -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+    border: 0;
+    padding: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea {
+    color: #666;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0,0,0,.15);
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+    color: #111;
+}
+
+select {
+    margin-bottom: 20px;
+}
+
+textarea {
+    overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+    vertical-align: top; /* Improves readability and alignment in all browsers */
+    width: 98%;
+}
+
+/* Links */
+a {
+    color: #ebac10;
+    text-decoration: none;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: #ffb600;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.btn {
+    background: #f9bb1e;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+    -webkit-appearance: none; /* Corrects inability to style clickable 'input' types in iOS */
+    border: none;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+
+.container {
+    max-width: 1020px;
+    margin: 0px auto;
+    padding: 0 4%;
+    position: relative;
+}
+
+/*  SELF CLEARING FLOATS - CLEARFIX METHOD */
+.container:after,
+.row:after,
+.col:after,
+.clr:after,
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+    padding-bottom: 20px;
+}
+
+.col {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+/* General
+-------------------------------*/
+
+.extra-margin-bottom {
+    margin-bottom: 40px;
+}
+
+.squish {
+    margin: 0;
+    padding: 0;
+}
+
+.push-right {
+    float: right;
+}
+
+.push-left {
+    float: left;
+}
+
+.pull-up {
+    position: relative;
+    top: -18px;
+}
+
+img.push-left {
+    padding: 0px 10px 10px 0;
+}
+
+.small {
+    font-size: 85%;
+}
+
+.large {
+    font-size: 115%;
+}
+
+.xlarge {
+    font-size: 130%;
+}
+
+.well {
+  min-height: 20px;
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #F2F5FC;
+}
+
+.clear {
+    clear: both;
+}
+
+.center {
+    text-align: center;
+}
+
+.space-left {
+    margin-left: 10px
+}
+
+.space-right {
+  margin-right: 10px
+}
+
+.space-top {
+    margin-top: 18px;
+}
+
+.space-bottom {
+    margin-bottom: 10px;
+}
+
+.extra-padding {
+    padding: 20px 0;
+}
+
+.padding-top {
+    padding: 30px 0 0;
+}
+
+.padding-bottom {
+    padding: 0 0 30px;
+}
+
+.hint {
+  color: #666;
+  font-size: 85%;
+}
+
+.right {
+  float: right;
+}
+
+.no-border {
+    border: none;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+/* Styles */
+
+.masthead {
+    padding: 5px 0;
+    background: #DCF2F7;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+
+.masthead .container {
+    padding: 0;
+}
+
+.invisible {
+    display: none;
+}
+
+table.time {
+
+}
+
+table.time td.hours {
+    background: rgba(0,0,0,.04);
+}
+/*  COLUMN WIDTH ON DISPLAYS +768px
+    You might need to play with media queries here to suite your design. */
+@media ( min-width : 768px ) {
+
+    .gutters .col {
+        margin-left: 4%;
+    }
+
+    .gutters .col:first-child {
+        margin-left: 0;
+    }
+
+    .grid_1 { width: 8.33333333333%; }
+    .grid_2 { width: 16.6666666667%; }
+    .grid_3 { width: 25%; }
+    .grid_4 { width: 33.3333333333%; }
+    .grid_5 { width: 41.6666666667%; }
+    .grid_6 { width: 50%; }
+    .grid_7 { width: 58.3333333333%; }
+    .grid_8 { width: 66.666666666%; }
+    .grid_9 { width: 75%; }
+    .grid_10 { width: 83.3333333333%; }
+    .grid_11 { width: 91.6666666667%; }
+    .grid_12 { width: 100%; }
+
+    .gutters .grid_1 { width: 4.5%; }
+    .gutters .grid_2 { width: 13.0%; }
+    .gutters .grid_3 { width: 21.5%; }
+    .gutters .grid_4 { width: 30.0%; }
+    .gutters .grid_5 { width: 38.5%; }
+    .gutters .grid_6 { width: 47.0%; }
+    .gutters .grid_7 { width: 55.5%; }
+    .gutters .grid_8 { width: 64.0%; }
+    .gutters .grid_9 { width: 72.5%; }
+    .gutters .grid_10 { width: 81.0%; }
+    .gutters .grid_11 { width: 89.5%; }
+    .gutters .grid_12 { width: 100%; }
+}
+
+
+

@@ -1,0 +1,35 @@
+README.markdown
+
+Homeschool Hours Tracking
+==========================
+
+A little PHP application for tracking time in a MySQL database. I use it for tracking my son's homeschooling hours, so that's how the database and output is set-up. You could modify it to track whatever time you want.
+
+
+Set Up
+===============
+
+time_config.ini
+----------------
+Enter your database values and what you want your password to be on the time_config.ini file.
+
+The default password is 'demo'. You'll be prompted for that when you open the index.php file. Also, you should protect this time_config.ini file if you upload it to a public server.
+
+
+MySQL Database Setup
+--------------------
+Create your MySQL table with these columns:
+
+id
+name
+date
+subject
+location
+notes
+hours
+
+
+index.php
+---------------------
+This is where the form is. Edit it with the values you want. At minimum, you probably want to change the names. Right now it's an invisible field since there's just one name. I wanted it to be future proof for more people.
+
